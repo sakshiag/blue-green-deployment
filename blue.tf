@@ -41,7 +41,6 @@ resource "ibm_app" "blue_app" {
   memory            = 128
   instances         = 2
   disk_quota        = 512
-  route_guid        = ["${ibm_app_route.route.id}"]
   command           = "python app.py"
   app_version       = "${var.app_version_blue}"
 }
